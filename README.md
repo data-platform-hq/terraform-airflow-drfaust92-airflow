@@ -67,4 +67,4 @@ No Outputs
 
 ## License
 
-Apache 2 Licensed. For more information please see [LICENSE](https://github.com/data-platform-hq/terraform-google-composer-env/blob/main/LICENSE)
+Apache 2 Licensed. For more information please see [LICENSE](https://github.com/data-platform-hq/terraform-airflow-drfaust92-airflow/blob/main/LICENSE)
