@@ -6,16 +6,16 @@ Terraform module for creation Airflow resources
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name                                                                      | Version  |
-| ------------------------------------------------------------------------- | -------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_airflow"></a> [airflow](#requirement\_airflow)       | >= 0.7.0 |
+| Name                                                                      | Version   |
+| ------------------------------------------------------------------------- | --------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0  |
+| <a name="requirement_airflow"></a> [airflow](#requirement\_airflow)       | >= 0.10.0 |
 
 ## Providers
 
-| Name                                                                | Version  |
-| ------------------------------------------------------------------- | -------- |
-| <a name="requirement_airflow"></a> [airflow](#requirement\_airflow) | >= 0.7.0 |
+| Name                                                                | Version   |
+| ------------------------------------------------------------------- | --------- |
+| <a name="requirement_airflow"></a> [airflow](#requirement\_airflow) | >= 0.10.0 |
 
 ## Modules
 
