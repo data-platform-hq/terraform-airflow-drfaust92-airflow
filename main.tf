@@ -1,27 +1,27 @@
 resource "airflow_connection" "raw_serverless_conn_id" {
-  connection_id = "${var.product_base_name}-raw-serverless"
+  connection_id = "${var.product_base_name}-raw_serverless"
   conn_type     = var.conn_type
-  extra         = tostring("{\"extra__google_cloud_platform__key_secret_name\" : \"${var.keys_path.raw-serverless}\", \"extra__google_cloud_platform__num_retries\" : 5, \"extra__google_cloud_platform__project\" : \"\", \"extra__google_cloud_platform__scope\" : \"\" }")
+  extra         = tostring("{\"extra__google_cloud_platform__key_secret_name\" : \"${var.keys_path.raw_serverless}\", \"extra__google_cloud_platform__num_retries\" : 5, \"extra__google_cloud_platform__project\" : \"\", \"extra__google_cloud_platform__scope\" : \"\" }")
 }
 
 resource "airflow_connection" "raw_spark_conn_id" {
-  connection_id = "${var.product_base_name}-raw-spark"
+  connection_id = "${var.product_base_name}-raw_spark"
   conn_type     = var.conn_type
-  extra         = tostring("{\"extra__google_cloud_platform__key_secret_name\" : \"${var.keys_path.raw-spark}\", \"extra__google_cloud_platform__num_retries\" : 5, \"extra__google_cloud_platform__project\" : \"\", \"extra__google_cloud_platform__scope\" : \"\" }")
+  extra         = tostring("{\"extra__google_cloud_platform__key_secret_name\" : \"${var.keys_path.raw_spark}\", \"extra__google_cloud_platform__num_retries\" : 5, \"extra__google_cloud_platform__project\" : \"\", \"extra__google_cloud_platform__scope\" : \"\" }")
   depends_on    = [airflow_connection.raw_serverless_conn_id]
 }
 
 resource "airflow_connection" "dp_spark_conn_id" {
-  connection_id = "${var.product_base_name}-dp-spark"
+  connection_id = "${var.product_base_name}-dp_spark"
   conn_type     = var.conn_type
-  extra         = tostring("{\"extra__google_cloud_platform__key_secret_name\" : \"${var.keys_path.dp-spark}\", \"extra__google_cloud_platform__num_retries\" : 5, \"extra__google_cloud_platform__project\" : \"\", \"extra__google_cloud_platform__scope\" : \"\" }")
+  extra         = tostring("{\"extra__google_cloud_platform__key_secret_name\" : \"${var.keys_path.dp_spark}\", \"extra__google_cloud_platform__num_retries\" : 5, \"extra__google_cloud_platform__project\" : \"\", \"extra__google_cloud_platform__scope\" : \"\" }")
   depends_on    = [airflow_connection.raw_spark_conn_id]
 }
 
 resource "airflow_connection" "dp_serverless_conn_id" {
-  connection_id = "${var.product_base_name}-dp-serverless"
+  connection_id = "${var.product_base_name}-dp_serverless"
   conn_type     = var.conn_type
-  extra         = tostring("{\"extra__google_cloud_platform__key_secret_name\" : \"${var.keys_path.dp-serverless}\", \"extra__google_cloud_platform__num_retries\" : 5, \"extra__google_cloud_platform__project\" : \"\", \"extra__google_cloud_platform__scope\" : \"\" }")
+  extra         = tostring("{\"extra__google_cloud_platform__key_secret_name\" : \"${var.keys_path.dp_serverless}\", \"extra__google_cloud_platform__num_retries\" : 5, \"extra__google_cloud_platform__project\" : \"\", \"extra__google_cloud_platform__scope\" : \"\" }")
   depends_on    = [airflow_connection.dp_spark_conn_id]
 }
 
