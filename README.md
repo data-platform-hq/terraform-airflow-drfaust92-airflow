@@ -56,7 +56,7 @@ No modules.
 | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------- | ------- | :------: |
 | <a name="input_product_base_name"></a> [product\_base\_name](#input\_product\_base\_name) | Cloud resources base name (used to create services)      | `string`   | n/a     |   yes    |
 | <a name="input_conn_type"></a> [conn\_type](#input\_conn\_type)                           | The connection type                                      | `string`   | n/a     |   yes    |
-| <a name="input_keys_path"></a> [keys\_path](#input\_keys\_path)                           | Path to service accounts keys (Secrets module resources) | `string`   | n/a     |   yes    |
+| <a name="input_keys_path"></a> [keys\_path](#input\_keys\_path)                           | Path to service accounts keys (Secrets module resources) | `map(any)` | n/a     |   yes    |
 | <a name="input_airflow_vars"></a> [airflow\_vars](#input\_airflow\_vars)                  | Set of Airflow variables                                 | `map(any)` | n/a     |   yes    |
 
 ## Outputs
